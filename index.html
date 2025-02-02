@@ -25,31 +25,27 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            overflow: hidden;  /* To prevent any scrollbars */
+            overflow: hidden;  /* Prevent scrollbars */
         }
 
         /* Style the countdown container */
         #countdown {
-            font-size: 5em;  /* Default large font size */
+            font-size: 10vw;  /* Dynamic font size based on viewport width */
             font-weight: bold;
-            letter-spacing: 2px;  /* Adjusted letter-spacing */
+            letter-spacing: 1px;  /* Adjusted letter-spacing */
+            white-space: nowrap;  /* Prevents wrapping of text */
         }
 
-        /* Responsive font size for smaller screens (like mobile) */
+        /* Responsive design for smaller screens */
         @media (max-width: 600px) {
             #countdown {
-                font-size: 3em;  /* Smaller font size on mobile */
+                font-size: 12vw;  /* Make the font slightly larger on small screens */
             }
         }
 
-        /* Responsive adjustments */
         @media (max-width: 480px) {
-            body {
-                padding: 10px;
-            }
-
             #countdown {
-                font-size: 2.5em;  /* Even smaller font size for small screens */
+                font-size: 14vw;  /* Even larger on very small screens */
             }
         }
     </style>
