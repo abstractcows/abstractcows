@@ -20,34 +20,34 @@
             color: black;
             font-family: 'Eloquia Display', serif;
             margin: 0;
-            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            overflow: hidden;  /* Prevent scrollbars */
+            height: 100vh;
+            overflow: hidden;
         }
 
         /* Style the countdown container */
         #countdown {
-            font-size: 10vw;  /* Default dynamic font size based on viewport width */
+            font-size: calc(10vw + 10vh);  /* Dynamically adjust font size based on both width and height */
             font-weight: bold;
             letter-spacing: 1px;  /* Adjusted letter-spacing */
             white-space: nowrap;  /* Prevents wrapping of text */
         }
 
-        /* Make the font size smaller on small screens (600px and below) */
+        /* For smaller screens (600px and below), adjust font size */
         @media (max-width: 600px) {
             #countdown {
-                font-size: 12vw;  /* Slightly smaller font size on small screens */
+                font-size: calc(12vw + 12vh);  /* Adjust for small screens */
             }
         }
 
         /* For very small screens (480px and below) */
         @media (max-width: 480px) {
             #countdown {
-                font-size: 14vw;  /* Larger font size for very small screens */
+                font-size: calc(14vw + 14vh);  /* Adjust for very small screens */
             }
         }
 
