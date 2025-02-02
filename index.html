@@ -22,16 +22,16 @@
             margin: 0;
             height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            flex-direction: column;
             overflow: hidden;  /* Prevent scrollbars */
         }
 
         /* Style the countdown container */
         #countdown {
-            font-size: 10vw;  /* Dynamic font size based on viewport width */
+            font-size: 10vw;  /* Default dynamic font size based on viewport width */
             font-weight: bold;
             letter-spacing: 1px;  /* Adjusted letter-spacing */
             white-space: nowrap;  /* Prevents wrapping of text */
@@ -40,14 +40,14 @@
         /* Make the font size smaller on small screens (600px and below) */
         @media (max-width: 600px) {
             #countdown {
-                font-size: 12vw;  /* Make the font slightly larger on small screens */
+                font-size: 12vw;  /* Slightly smaller font size on small screens */
             }
         }
 
         /* For very small screens (480px and below) */
         @media (max-width: 480px) {
             #countdown {
-                font-size: 16vw;  /* Adjust to make it fit without wrapping */
+                font-size: 14vw;  /* Larger font size for very small screens */
             }
         }
 
@@ -56,6 +56,7 @@
             font-size: 1.2em;
             color: gray;
             margin-top: 20px;
+            padding-bottom: 10px;
         }
 
         footer a {
