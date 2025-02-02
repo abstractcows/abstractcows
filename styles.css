@@ -1,0 +1,32 @@
+/* Load Eloquia Display font */
+@font-face {
+    font-family: 'Eloquia Display';
+    src: url('fonts/eloquia-display.woff2') format('woff2'),
+         url('fonts/eloquia-display.woff') format('woff'),
+         url('fonts/eloquia-display.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply Eloquia Display to the whole body */
+body {
+    font-family: 'Eloquia Display', serif;
+    background-color: white;
+    color: black;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+#countdown {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 50px;
+}
