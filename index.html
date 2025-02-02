@@ -26,28 +26,30 @@
             align-items: center;
             text-align: center;
             height: 100vh;
-            overflow: hidden;
+            overflow: hidden;  /* Prevent scrollbars */
         }
 
         /* Style the countdown container */
         #countdown {
-            font-size: calc(10vw + 10vh);  /* Dynamically adjust font size based on both width and height */
+            font-size: 15vw;  /* Default dynamic font size based on viewport width */
             font-weight: bold;
-            letter-spacing: 1px;  /* Adjusted letter-spacing */
+            letter-spacing: 1px;
             white-space: nowrap;  /* Prevents wrapping of text */
+            max-width: 100%;  /* Ensure it doesn’t overflow the screen */
+            max-height: 90%;  /* Keep the height under control */
         }
 
         /* For smaller screens (600px and below), adjust font size */
         @media (max-width: 600px) {
             #countdown {
-                font-size: calc(12vw + 12vh);  /* Adjust for small screens */
+                font-size: 20vw;  /* Slightly larger font size for small screens */
             }
         }
 
         /* For very small screens (480px and below) */
         @media (max-width: 480px) {
             #countdown {
-                font-size: calc(14vw + 14vh);  /* Adjust for very small screens */
+                font-size: 30vw;  /* Increase size on very small screens */
             }
         }
 
