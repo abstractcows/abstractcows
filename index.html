@@ -25,6 +25,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            flex-direction: column;
             overflow: hidden;  /* Prevent scrollbars */
         }
 
@@ -36,17 +37,35 @@
             white-space: nowrap;  /* Prevents wrapping of text */
         }
 
-        /* Responsive design for smaller screens */
+        /* Make the font size smaller on small screens (600px and below) */
         @media (max-width: 600px) {
             #countdown {
                 font-size: 12vw;  /* Make the font slightly larger on small screens */
             }
         }
 
+        /* For very small screens (480px and below) */
         @media (max-width: 480px) {
             #countdown {
-                font-size: 14vw;  /* Even larger on very small screens */
+                font-size: 16vw;  /* Adjust to make it fit without wrapping */
             }
+        }
+
+        /* Footer Style */
+        footer {
+            font-size: 1.2em;
+            color: gray;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: gray;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -54,6 +73,12 @@
 
     <!-- Countdown timer -->
     <div id="countdown"></div>
+
+    <!-- Footer -->
+    <footer>
+        <a href="https://x.com/AbstractCows" target="_blank">&lt;x&gt;</a>
+        <a href="https://discord.com/invite/AbstractCows" target="_blank">&lt;discord&gt;</a>
+    </footer>
 
     <script>
         // Set the target date (17th February 2025 at 4:00 PM)
