@@ -31,25 +31,25 @@
 
         /* Style the countdown container */
         #countdown {
-            font-size: 15vw;  /* Default dynamic font size based on viewport width */
+            font-size: 8vw;  /* Smaller dynamic font size based on viewport width */
             font-weight: bold;
             letter-spacing: 1px;
             white-space: nowrap;  /* Prevents wrapping of text */
             max-width: 100%;  /* Ensure it doesn’t overflow the screen */
-            max-height: 90%;  /* Keep the height under control */
+            max-height: 70%;  /* Keep the height under control */
         }
 
-        /* For smaller screens (600px and below), adjust font size */
+        /* For small screens (600px and below), adjust font size */
         @media (max-width: 600px) {
             #countdown {
-                font-size: 20vw;  /* Slightly larger font size for small screens */
+                font-size: 10vw;  /* Adjust for small screens */
             }
         }
 
         /* For very small screens (480px and below) */
         @media (max-width: 480px) {
             #countdown {
-                font-size: 30vw;  /* Increase size on very small screens */
+                font-size: 12vw;  /* Adjust for very small screens */
             }
         }
 
