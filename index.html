@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstract Cows Countdown</title>
+
+    <!-- Import Eloquia Display font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Eloquia+Display&display=swap" rel="stylesheet">
+
+    <style>
+        /* Set the background to white and text to black */
+        body {
+            background-color: white;
+            color: black;
+            font-family: 'Eloquia Display', serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Style the countdown container */
+        #countdown {
+            font-size: 2em;  /* Smaller font size */
+            font-weight: bold;
+            letter-spacing: 1px;  /* Slightly reduced letter-spacing */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="countdown"></div>
+
+    <script>
+        // Set the target date (14th February 2025 at midnight)
+        const countdownDate = new Date("2025-02-14T00:00:00").getTime();
+
+        // Update the countdown every second
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const timeLeft = countdownDate - now;
+
+            if (timeLeft < 0) {
+                clearInterval(timer);
+                document.getElementById("countdown").innerHTML = "TIME'S UP!";
+                return;
+            }
+
+            // Calculate days, hours, minutes, and seconds
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            // Display the countdown
+            document.getElementById("countdown").innerHTML =
+                days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+        }, 1000);
+    </script>
+
+</body>
+</html>
