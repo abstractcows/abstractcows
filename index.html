@@ -25,24 +25,43 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            overflow: hidden;  /* To prevent any scrollbars */
         }
 
         /* Style the countdown container */
         #countdown {
-            font-size: 5em;  /* Larger font size */
+            font-size: 5em;  /* Default large font size */
             font-weight: bold;
             letter-spacing: 2px;  /* Adjusted letter-spacing */
+        }
+
+        /* Responsive font size for smaller screens (like mobile) */
+        @media (max-width: 600px) {
+            #countdown {
+                font-size: 3em;  /* Smaller font size on mobile */
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            #countdown {
+                font-size: 2.5em;  /* Even smaller font size for small screens */
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Countdown timer only -->
+    <!-- Countdown timer -->
     <div id="countdown"></div>
 
     <script>
-        // Set the target date (14th February 2025 at midnight)
-        const countdownDate = new Date("2025-02-14T00:00:00").getTime();
+        // Set the target date (17th February 2025 at 4:00 PM)
+        const countdownDate = new Date("2025-02-17T16:00:00").getTime();
 
         // Update the countdown every second
         const timer = setInterval(function() {
@@ -51,7 +70,7 @@
 
             if (timeLeft < 0) {
                 clearInterval(timer);
-                document.getElementById("countdown").innerHTML = "TIME'S UP!";
+                document.getElementById("countdown").innerHTML = "Your awards await you";
                 return;
             }
 
